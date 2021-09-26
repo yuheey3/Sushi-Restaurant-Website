@@ -3,6 +3,13 @@ import PizzaLeft from "../assets/about2.jpg";
 import "../styles/Contact.css";
 
 function Contact() {
+ 
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Message has been submitted 👍");
+      document.getElementById("contact-form").reset();
+    }
+
   return (
     <div className="contact">
       <div
@@ -12,15 +19,15 @@ function Contact() {
       <div className="rightSide">
         <h1> Contact Us</h1>
 
-        <form id="contact-form" method="POST">
-          <label htmlFor="name">Full Name</label>
-          <input name="name" placeholder="Enter full name..." type="text" />
+        {/* <form id="contact-form" method="POST"> */}
+        <form id="contact-form" onSubmit={handleSubmit}method="POST">
+          <label htmlFor="name">Name</label>
+          <input name="name"  type="text" />
           <label htmlFor="email">Email</label>
-          <input name="email" placeholder="Enter email..." type="email" />
+          <input name="email" type="email" />
           <label htmlFor="message">Message</label>
           <textarea
             rows="6"
-            placeholder="Enter message..."
             name="message"
             required
           ></textarea>
@@ -29,6 +36,8 @@ function Contact() {
       </div>
     </div>
   );
+
+  
 }
 
 export default Contact;

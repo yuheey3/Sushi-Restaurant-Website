@@ -18,8 +18,6 @@ function Contact() {
       ></div>
       <div className="rightSide">
         <h1> Contact Us</h1>
-
-        {/* <form id="contact-form" method="POST"> */}
         <form id="contact-form" onSubmit={handleSubmit}method="POST">
           <label htmlFor="name">Name</label>
           <input name="name"  type="text" />

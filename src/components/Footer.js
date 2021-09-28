@@ -14,6 +14,8 @@ function Footer() {
             </div>
             <p> &copy; 2021 yukisushi.com</p>
         </div>
+
+        
     )
 }
 
